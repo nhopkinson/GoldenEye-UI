@@ -9,11 +9,12 @@
       "parameter",
       "arrow-parameter",
       "property-declaration",
-      "variable-declaration",
+      // "variable-declaration",
       "member-variable-declaration",
       "object-destructuring",
       "array-destructuring"
-    ]
+    ],
+    "interface-name": false
   },
   "linterOptions": {
     "exclude": ["config/**/*.js", "node_modules/**/*.ts", "coverage/lcov-report/*.js", "src/registerServiceWorker.ts"]
