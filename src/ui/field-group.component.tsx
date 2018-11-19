@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ControlLabel, FormControl, FormGroup, HelpBlock } from 'react-bootstrap';
 
-interface IFieldGroupProps {
+interface FieldGroupProps {
   id: string;
   type: string;
   label: string;
@@ -9,7 +9,7 @@ interface IFieldGroupProps {
   placeholder?: string;
 }
 
-export function FieldGroup({ id, label, help, ...props }: IFieldGroupProps): JSX.Element {
+export function FieldGroup({ id, label, help, ...props }: FieldGroupProps): JSX.Element {
   return (
     <FormGroup controlId={id}>
       <ControlLabel>{label}</ControlLabel>
