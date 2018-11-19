@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.6.1",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.1",
     "react-scripts-ts": "^3.1.0"
   },
@@ -17,9 +18,11 @@
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.3",
     "@types/react": "^16.7.1",
+    "@types/react-bootstrap": "^0.32.14",
     "@types/react-dom": "^16.0.9",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.4",
+    "tslint-microsoft-contrib": "^5.2.1",
     "typescript": "^3.1.6"
   }
 }
