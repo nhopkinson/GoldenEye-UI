@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Grid, Panel, Row } from 'react-bootstrap';
 import { Button } from './button';
-/*import { any } from 'prop-types';*/
 
 interface RandomUserCardState {
   user: User;
