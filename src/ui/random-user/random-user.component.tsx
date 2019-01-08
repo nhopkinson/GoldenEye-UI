@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Button } from './button';
 import { RandomUserCard } from './random-user-card.component';
-import { User } from './User';
+import { randomUserRepository } from '../../services/repositories/random-user-repository';
+import { User } from '../../services/repositories/models/User';
 
 interface RandomUserState {
   user: User;
@@ -21,15 +22,9 @@ export class RandomUser extends React.Component {
   }
 
   public async getRandomUser(): Promise<void> {
-    const apiUrl = 'https://randomuser.me/api/';
+    const user = await randomUserRepository.getRandomUser();
 
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-
-    const user = data.results[0];
-    const { name, picture } = user;
-
-    this.setState({ user: { name: name.first, email: user.email, picture: picture.medium } });
+    this.setState({ user });
   }
   public render(): JSX.Element {
     const { picture, name, email } = this.state.user;
