@@ -17,6 +17,7 @@ class App extends React.Component {
               <Route exact={true} path="/file-upload" component={FileUpload} />
               <Route exact={true} path="/registration-form" component={RegistrationForm} />
               <Route exact={true} path="/random-user" component={RandomUser} />
+              <Route exact={true} path="/multiple-user" component={RandomUser} />
             </Row>
           </Grid>
         </>
