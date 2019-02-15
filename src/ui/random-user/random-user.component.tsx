@@ -32,9 +32,6 @@ export class RandomUser extends React.Component {
     return (
       <div>
         <RandomUserCard name={name} picture={picture} email={email} />
-        <RandomUserCard name={name} picture={picture} email={email} />
-        <RandomUserCard name={name} picture={picture} email={email} />
-        <RandomUserCard name={name} picture={picture} email={email} />
         <Button btnLabel="Generate User" handleClick={this.handleClick} />
       </div>
     );

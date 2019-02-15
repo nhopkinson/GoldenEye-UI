@@ -14,13 +14,28 @@ export class RandomUserRepository {
     const response = await this.apiClient.get(apiUrl);
     const data = await response.json();
 
-    const user = data.results[0];
-    const { name, email, picture } = user;
+    const apiUser = data.results[0];
+    const { name, email, picture } = apiUser;
 
     return new User({
       email,
       name: name.first,
       picture: picture.medium,
+    });
+  }
+
+  public async getRandomUsers(): Promise<User[]> {
+    const response = await this.apiClient.get(apiUrl + '?results=5');
+    const data = await response.json();
+
+    return data.results.map((apiUser: any) => {
+      const { name, email, picture } = apiUser;
+
+      return new User({
+        email,
+        name: name.first,
+        picture: picture.medium,
+      });
     });
   }
 }
